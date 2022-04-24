@@ -1,0 +1,36 @@
+﻿@model MvcPersonal.Models.Personal
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Редактирование сотрудника</h2>
+
+@using (Html.BeginForm())
+{
+@Html.LabelFor(model => model.Name);
+<br />
+@Html.EditorFor(model => model.Name);
+<br />
+<br />
+@Html.LabelFor(model => model.Profession);
+<br />
+@Html.EditorFor(model => model.Profession);
+<br />
+<br />
+@Html.LabelFor(model => model.Department);
+<br />
+@Html.EditorFor(model => model.Department);
+<br />
+<br />
+@Html.LabelFor(model => model.Salary);
+<br />
+@Html.EditorFor(model => model.Salary);
+<br />
+<br />
+<input type="submit" value="Редактировать" />
+}
+@Html.ActionLink("Главная","Index")
